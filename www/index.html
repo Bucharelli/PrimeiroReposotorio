@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+</head>
+
+<script>
+    var nr1, nr2, resultado;
+
+     function somar(){
+            nr1 = parseInt(document.getElementById ('nr1').value)
+            nr2 = parseInt(document.getElementById ('nr2').value)
+            resultado = nr1 + nr2
+            document.getElementById('visor').innerHTML = resultado
+        }
+
+             function subtrair(){
+            nr1 = parseInt(document.getElementById ('nr1').value)
+            nr2 = parseInt(document.getElementById ('nr2').value)
+            resultado = nr1 - nr2
+            document.getElementById('visor').innerHTML = resultado
+        }
+
+             function multiplicar(){
+            nr1 = parseInt(document.getElementById ('nr1').value)
+            nr2 = parseInt(document.getElementById ('nr2').value)
+            resultado = nr1 * nr2
+            document.getElementById('visor').innerHTML = resultado
+        }
+
+             function dividir(){
+            nr1 = parseInt(document.getElementById ('nr1').value)
+            nr2 = parseInt(document.getElementById ('nr2').value)
+            resultado = nr1 / nr2
+            document.getElementById('visor').innerHTML = resultado
+        }
+</script>
+
+<style>
+    button{
+        background-color: brown;
+    }
+</style>
+
+<body>
+  
+<h1>Calculadora</h1>
+<button onclick="somar()">SOMAR</button>
+<button onclick="subtrair()">SUBTRAIR</button>
+<button onclick="multiplicar()">MULTIPLICAR</button>
+<button onclick="dividir()">DIVIDIR</button>
+
+<br><br>
+
+<!--Área dos imputes de inserção de npumeros-->
+<input id="nr1" type="number" placeholder="1º Número">
+<input id="nr2"  type="number" placeholder="2º Número">
+
+<br><br>
+
+<!--Área do visor de resultado-->
+<hr style="height: 2px; background-color: black;">
+<h2 id="visor"></h2>
+<br>
+<hr style="height: 2px; background-color: black;">
+</body>
+</html>
